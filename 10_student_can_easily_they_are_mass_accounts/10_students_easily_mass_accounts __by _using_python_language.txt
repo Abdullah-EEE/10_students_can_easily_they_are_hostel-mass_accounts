@@ -1,0 +1,139 @@
+f=int(input("Faruk vair bazar cost:"))
+f_v=int(input("Faruk vair vivid:"))
+f_ttk=f+f_v
+f_m=float(input("Faruk vair meal:"))
+
+ar=int(input("Arif vair bazar cost:"))
+ar_v=int(input("Arif vair vivid:"))
+ar_ttk=ar+ar_v
+ar_m=float(input("Arif vair meal:"))
+
+an=int(input("Anas er bazar cost:"))
+an_v=int(input("Anas er vivid:"))
+an_ttk=an+an_v
+an_m=float(input("Anas meal:"))
+
+n=int(input("Nirob er bazar cost:"))
+n_v=int(input("Nirob er  vivid:"))
+n_ttk=n+n_v
+n_m=float(input("Nirob er meal:"))
+
+ja=int(input("Jabed er bazar cost:"))
+ja_v=int(input("Jabed er vivid:"))
+ja_ttk=ja+ja_v
+ja_m=float(input("Jabed er meal:"))
+
+mah=int(input("Mahabub vair bazar cost:"))
+mah_v=int(input("Mahbub vair vivid:"))
+mah_ttk=mah+mah_v
+mah_m=float(input("Mahbub vair meal:"))
+
+sa=int(input("Shanto vair bazar cost:"))
+sa_v=int(input("shanto vair vivid:"))
+sa_ttk=sa+sa_v
+sa_m=float(input("shanto vair meal:"))
+
+mun=int(input("Munna vair bazar cost:"))
+mun_v=int(input("Munna vair vivid:"))
+mun_ttk=mun+mun_v
+mun_m=float(input("Munna vair meal:"))
+
+r=int(input("Rakib er bazar cost:"))
+r_v=int(input("Rakib er vivid:"))
+r_ttk=r+r_v
+r_m=float(input("Rakib er meal:"))
+
+mas=int(input("mashur vair bazar:  "))
+mas_v=int(input("mashur vair vivid:  "))
+mas_ttk=mas+mas_v
+mas_m=float(input("mashur vair meal: "))
+
+k=int(input("enter the khalar bill: ")
+
+kh=k/10
+
+j=ar+f+an+n+ja+mah+sa+mun+r+mas
+l=ar_m+f_m+an_m+n_m+ja_m+mah_m+sa_m+mun_m+r_m+mas_m
+meal_r=j/l
+per_v=(f_v+ar_v+an_v+n_v+ja_v+mah_v+sa_v+mun_v+r_v+mas_v)/10
+
+l_ttk=[f_ttk,ar_ttk,an_ttk,n_ttk]
+
+li_ttk=[ja_ttk,mah_ttk,sa_ttk,mun_ttk,r_ttk,mas_ttk]
+
+p_n=["Faruk","Arif","Anas","nirob"]
+
+p_na=["jabed","Mahabub","Shanto","Munna","Rakib","Mashur"]
+
+M_l=[f_m,ar_m,an_m,n_m]
+
+M_li=[ja_m,mah_m,sa_m,mun_m,r_m,mas_m]
+
+k=list(zip(p_n,M_l,l_ttk))
+
+kk=list(zip(p_na,M_li,li_ttk))
+
+
+def mass(tt,m,n,k,v):
+    totalc=(m*n)+k+v
+    tr=tt-totalc
+    return tr
+
+faruk=mass(f_ttk,f_m,meal_r,kh,per_v)
+arif=mass(ar_ttk,ar_m,meal_r,kh,per_v)
+anas=mass(an_ttk,an_m,meal_r,kh,per_v)
+nirob=mass(n_ttk,n_m,meal_r,kh,per_v)
+jabed=mass(ja_ttk,ja_m,meal_r,kh,per_v)
+mahabub=mass(mah_ttk,mah_m,meal_r,kh,per_v)
+shanto=mass(sa_ttk,sa_m,meal_r,kh,per_v)
+munna=mass(mun_ttk,mun_m,meal_r,kh,per_v)
+rakib=mass(r_ttk,r_m,meal_r,kh,per_v)
+mashur=mass(mas_ttk,mas_m,meal_r,kh,per_v)
+
+khalart=faruk+arif+anas+nirob+jabed+mahabub+shanto+munna+rakib+mashur
+
+print("Meal rate=",meal_r)
+print("per person vivid=",per_v)
+print('per person khalar bill: ',kh)
+print()
+print("Per person total meal number , Total tk :",k,"\n",kk)
+print()
+print("FARUK vair bki:  ",faruk)
+print("ARIF vair baki:  ",arif)
+print("ANASer baki:  ",anas)
+print("NIROB er baki:  ",nirob)
+print("JABED er baki:  ",jabed)
+print("MAHABUB vair baki:  ",mahabub)
+print("SHANTO vair baki:  ",shanto)
+print("MUNNNA vair baki:  ",munna)
+print("RAKIB er baki:  ",rakib)
+print("Mashur vair baki",mashur)
+print()
+print("khalar mot beton",khalart)
+
+
+#output a sample mass:
+
+Meal rate= 39.55294117647059
+per person vivid= 200.0
+per person khalar bill:  800.0
+
+Per person total meal number , Total tk : [('Faruk', 50.0, 3200), ('Arif', 60.0, 750), ('Anas', 65.0, 3600), ('nirob', 45.0, 60)] 
+ [('jabed', 25.0, 0), ('Mahabub', 38.0, 4000), ('Shanto', 12.0, 600), ('Munna', 50.0, 4600), ('Rakib', 30.0, 0), ('Mashur', 50.0, 2000)]
+
+FARUK vair bki:   222.35294117647027
+ARIF vair baki:   -2623.1764705882356
+ANASer baki:   29.05882352941171
+NIROB er baki:   -2719.8823529411766
+JABED er baki:   -1988.8235294117649
+MAHABUB vair baki:   1496.9882352941177
+SHANTO vair baki:   -874.6352941176469
+MUNNNA vair baki:   1622.3529411764703
+RAKIB er baki:   -2186.588235294118
+Mashur vair baki -977.6470588235297
+
+khalar mot beton -8000.000000000001
+
+#
+minus sign manager got
+plus sign means Border got
